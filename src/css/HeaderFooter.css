@@ -1,0 +1,17 @@
+.header {
+    background-color: #150329;
+    border: 2px solid #DAF7A6;
+    border-radius: 30px;
+    padding: 10px;
+    transition: 0.5s;
+    display: flex;
+}
+
+.left {
+    flex: 1;
+    padding: 15px;
+}
+
+.right {
+    padding: 15px;
+}
