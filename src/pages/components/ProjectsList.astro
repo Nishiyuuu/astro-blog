@@ -1,0 +1,18 @@
+---
+import '../../css/ProjectsList.css'
+interface Props {
+  name: string;
+  description: string;
+  image: string;
+  links: string;
+}
+const { name, description, image, links } = Astro.props;
+---
+<div class="project">
+  <a class = "link" href={links} target="_blank">
+    <img src={image} alt="Project 1" />
+    <h3>{name}</h3>
+    <p>{description}</p>
+  </a>
+</div>
+<script src="../../js/search.js"></script>
