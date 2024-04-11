@@ -1,19 +1,16 @@
 ---
-import HeaderFooter from './components/HeaderFooter.astro'
-import Footer from './components/Footer.astro'
-import '../css/index.css'
+import HeaderFooter from "./components/Header.astro";
+import Footer from "./components/Footer.astro";
+import Head from "./components/Head.astro";
+import "../css/index.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<HeaderFooter />
-		<Footer />
-	</body>
+  <head>
+    <Head title="Home" />
+  </head>
+  <body>
+    <HeaderFooter />
+    <Footer />
+  </body>
 </html>
