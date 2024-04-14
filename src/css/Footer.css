@@ -4,8 +4,7 @@ footer {
     border-radius: 30px;
     padding: 10px;
     transition: 0.5s;
-    bottom: 0;
-    position: fixed;
+    position: absolute;
     text-decoration: none;
     width: 100%;
 }

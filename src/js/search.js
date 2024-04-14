@@ -14,17 +14,18 @@ document.addEventListener('DOMContentLoaded', function() {
     function filterProjects(searchTerm) {
         projects.forEach(project => {
             const title = project.querySelector('h3').textContent.toLowerCase();
-            if (title.includes(searchTerm)) {
-                project.style.display = 'block';
+            const description = project.querySelector('.description').textContent.toLowerCase();
+            if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                project.classList.remove('hidden');
             } else {
-                project.style.display = 'none';
+                project.classList.add('hidden')
             }
         });
     }
 
     function showAllProjects() {
         projects.forEach(project => {
-            project.style.display = 'block';
+            project.classList.remove('hidden');
         });
     }
 });
