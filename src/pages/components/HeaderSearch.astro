@@ -1,0 +1,16 @@
+---
+import '../../css/HeaderSearch.css'
+import PagesLinks from './PagesLinks.astro'
+---
+<header class="header">
+    <div class="left">
+      <PagesLinks href="" name="Nishiyuu" />
+    </div>
+    <div class = "searchblok">
+      <input class = "search" id="searchInput" type="text" placeholder="Search..">
+    </div>
+    <div class="right">
+      <PagesLinks href="/" name="Home" />
+      <PagesLinks href="./projects" name="Projects" />
+    </div>    
+  </header>

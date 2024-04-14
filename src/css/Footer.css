@@ -6,7 +6,10 @@ footer {
     transition: 0.5s;
     position: absolute;
     text-decoration: none;
-    width: 100%;
+    width: 97.8%;
+    display: flex;
+    justify-content: center;
+
 }
 img {
     width: 50px;

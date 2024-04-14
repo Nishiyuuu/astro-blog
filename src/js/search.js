@@ -1,31 +1,28 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const searchInput = document.querySelector('.search-input');
+    console.log("DOM fully loaded and parsed");
+    const searchInput = document.querySelector('.search');
     const projects = document.querySelectorAll('.project');
 
     searchInput.addEventListener('input', function() {
-        const searchTerm = searchInput.value.trim().toLowerCase();
-        if (searchTerm === '') {
-            showAllProjects();
-        } else {
-            filterProjects(searchTerm);
+        filterProjects(searchInput.value.trim().toLowerCase());
+    });
+
+    searchInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Щоб не відправляло форму
+            filterProjects(searchInput.value.trim().toLowerCase());
         }
     });
 
     function filterProjects(searchTerm) {
         projects.forEach(project => {
             const title = project.querySelector('h3').textContent.toLowerCase();
-            const description = project.querySelector('.description').textContent.toLowerCase();
+            const description = project.querySelector('p').textContent.toLowerCase();
             if (title.includes(searchTerm) || description.includes(searchTerm)) {
-                project.classList.remove('hidden');
+                project.style.display = 'block';
             } else {
-                project.classList.add('hidden')
+                project.style.display = 'none';
             }
-        });
-    }
-
-    function showAllProjects() {
-        projects.forEach(project => {
-            project.classList.remove('hidden');
         });
     }
 });

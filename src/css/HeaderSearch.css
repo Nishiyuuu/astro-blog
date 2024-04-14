@@ -1,0 +1,34 @@
+.header {
+    background-color: #150329;
+    border: 2px solid #DAF7A6;
+    border-radius: 30px;
+    padding: 10px;
+    transition: 0.5s;
+    display: flex;
+}
+
+.left {
+    margin-right: auto;
+    padding: 10px;
+}
+
+.right {
+    margin-left: auto;
+    padding: 10px;
+}
+
+.searchblok {
+    background-color: #DAF7A6;
+    border-radius: 30px;
+    padding: 10px;
+    transition: 0.5s;
+}
+.search {
+    background-color: #DAF7A6;
+    border-radius: 30px;
+    padding: 10px;
+    transition: 0.5s;
+    color: #150329;
+    font-weight: bold;
+    font-size: 15px;
+}

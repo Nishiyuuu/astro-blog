@@ -1,5 +1,6 @@
 ---
 import Head from "./components/Head.astro";
+import HeaderSearch from "./components/HeaderSearch.astro";
 import Footer from "./components/Footer.astro";
 import "../css/index.css";
 import ProjectsList from "./components/ProjectsList.astro";
@@ -11,6 +12,8 @@ import ProjectsList from "./components/ProjectsList.astro";
     <Head title="Projects" />
   </head>
   <body>
+    <HeaderSearch />
+
     <div class="project-list">
       <ProjectsList
         name="Goose game with GoIt"
@@ -102,7 +105,41 @@ import ProjectsList from "./components/ProjectsList.astro";
         links="sbjv"
       />
     </div>
-
+    <script type="module">
+      document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.querySelector('.search');
+    
+        if (!searchInput) {
+          console.log("Search input not found");
+          return;
+        }
+    
+        const projects = document.querySelectorAll('.project');
+    
+        searchInput.addEventListener('input', function() {
+            filterProjects(searchInput.value.trim().toLowerCase());
+        });
+    
+        searchInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault(); // Щоб не відправляло форму
+                filterProjects(searchInput.value.trim().toLowerCase());
+            }
+        });
+    
+        function filterProjects(searchTerm) {
+            projects.forEach(project => {
+                const title = project.querySelector('h3').textContent.toLowerCase();
+                const description = project.querySelector('p').textContent.toLowerCase();
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    project.style.display = 'block';
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+        }
+      });
+    </script>
     <Footer />
   </body>
 </html>
