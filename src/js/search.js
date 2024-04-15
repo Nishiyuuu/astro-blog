@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("DOM fully loaded and parsed");
     const searchInput = document.querySelector('.search');
+
+    if (!searchInput) {
+      console.log("Search input not found");
+      return;
+    }
+
     const projects = document.querySelectorAll('.project');
 
     searchInput.addEventListener('input', function() {
@@ -25,4 +30,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-});
+  });
