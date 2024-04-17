@@ -1,6 +1,11 @@
 ---
 import { Image } from 'astro:assets';
 import '../../css/social-links.css'
+interface Props {
+    link: string;
+    icon: string;
+
+}
 const { link, icon } = Astro.props;
 ---
 <a href = {link} target="_blank">
