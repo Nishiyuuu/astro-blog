@@ -1,12 +1,15 @@
 ---
+import { Image } from 'astro:assets';
 import '../../css/social-links.css'
-interface Props {
-    link: string;
-    icon: string;
+const Astro = {
+    props: {
+        link: String,
+        icon: String
+    }
 }
 
 const { link, icon } = Astro.props;
 ---
 <a href = {link} target="_blank">
-    <img src = {icon} alt="github logo"/>
+    <Image src = {icon} alt="social images" />
 </a>
