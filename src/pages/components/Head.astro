@@ -1,11 +1,12 @@
 ---
 interface Props{
     title: string;
+    iconhref: string;
 }
-const { title } = Astro.props;
+const { title, iconhref } = Astro.props;
 ---
 <meta charset="utf-8" />
-<link rel="icon" href="/astro-blog/images/logo.ico" />
+<link rel="icon" href={"/astro-blog" + iconhref} />
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
 <title>{title}</title>
