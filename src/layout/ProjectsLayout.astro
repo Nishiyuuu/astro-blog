@@ -1,19 +1,19 @@
 ---
 import HeaderSearch from "../pages/components/HeaderSearch.astro";
 import Footer from "../pages/components/Footer.astro";
-import "../css/index.css";
-import "../css/ProjectsList.css";
+import '../css/index.css'
+
 ---
 <html lang="en">
-  <head>
-    <title>Projects1</title>
-    <icon rel="icon" href="/images/logo.ico" />
-  </head>
-  <body>
-    <HeaderSearch />
-    <div class = "slot">
-        <slot />
-    </div>
-    <Footer />
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <link rel="icon" href="/images/logo.ico">
+</head>
+<body>
+  <HeaderSearch />
+  <slot />
+  <Footer />
+</body>
 </html>
