@@ -2,5 +2,34 @@ body{
     color: #ffffff;
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
+    text-align: left;
+}
+h1{
+    font-size: 40px;
     text-align: center;
+}
+h2{
+    font-size: 30px;
+    text-align: center;
+}
+pre{
+    border: 1px solid #DAF7A6;
+    border-radius: 30px;
+    padding: 1rem;
+    border-style: dashed solid;     
+    border-width: 4px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #DAF7A6;
+    border-radius: 30px;
+}
+::-webkit-scrollbar-track {
+    background-color: #150329;
+    border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #DAF7A1;
 }
