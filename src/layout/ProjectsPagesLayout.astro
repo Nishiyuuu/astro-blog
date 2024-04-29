@@ -1,0 +1,19 @@
+---
+import '../css/index.css'
+import Header from '../pages/posts/HeaderPost.astro';
+import Footer from '../pages/components/Footer.astro';  
+import '../css/post.css'
+---
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/logo.ico">
+    <title>Post</title>
+</head>
+<body>
+    <Header />
+    <slot />
+    <Footer />
+</body>
+</html>
