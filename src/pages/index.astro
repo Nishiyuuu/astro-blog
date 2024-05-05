@@ -2,7 +2,9 @@
 import HeaderFooter from "./components/Header.astro";
 import Footer from "./components/Footer.astro";
 import Head from "./components/Head.astro";
+import ProjectsList from "./components/ProjectsList.astro";
 import "../css/index.css";
+import '../css/ProjectsList.css'
 ---
 
 <html lang="en">
@@ -11,9 +13,10 @@ import "../css/index.css";
   </head>
   <body>
     <HeaderFooter />
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt recusandae sequi molestias earum maxime magnam asperiores ullam, laudantium voluptatem eligendi cumque veniam quam eos labore minus beatae reiciendis! Dignissimos, laborum.</h1>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt recusandae sequi molestias earum maxime magnam asperiores ullam, laudantium voluptatem eligendi cumque veniam quam eos labore minus beatae reiciendis! Dignissimos, laborum.</h1>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt recusandae sequi molestias earum maxime magnam asperiores ullam, laudantium voluptatem eligendi cumque veniam quam eos labore minus beatae reiciendis! Dignissimos, laborum.</h1>
+    <div class="projectlist">
+    <ProjectsList name="Goose game with GoIt" description="This is my first projects" image = "/images/project_1.png" links ="/posts/P1"/>
+    <ProjectsList name="Todo site" description="Todo site with html css js" image = "/images/project_2.png" links ="/posts/P2"/>
+    </div>
     <Footer />
   </body>
 </html>

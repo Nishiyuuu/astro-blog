@@ -1,35 +1,72 @@
-.header {
-    background-color: #150329;
-    border: 2px solid #DAF7A6;
-    border-radius: 30px;
-    padding: 10px;
-    transition: 0.5s;
-    display: flex;
+@media screen and (max-width: 800px) {
+    .header {
+        background-color: #150329;
+        border: 2px solid #DAF7A6;
+        border-radius: 30px;
+        padding: 10px;
+        transition: 0.5s;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .left {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .right {
+        display: flex;
+        justify-content: center;
+    }
+    .searchblok{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        border: 2px solid #DAF7A6;  
+        border-radius: 30px;
+        margin: 10px;
+        background-color: #DAF7A6;    
+    }
+    .searchblok input{
+        padding: 10px;
+        border: 2px solid #DAF7A6;
+        border-radius: 30px;
+        margin: 10px;
+        background-color: #DAF7A6;
+    }
 }
-
-.left {
-    margin-right: auto;
-    padding: 10px;
-}
-
-.right {
-    margin-left: auto;
-    padding: 10px;
-}
-
-.searchblok {
-    background-color: #DAF7A6;
-    border-radius: 30px;
-    padding: 10px;
-    transition: 0.5s;
-}
-.search {
-    background-color: #DAF7A6;
-    border-radius: 30px;
-    padding: 10px;
-    transition: 0.5s;
-    color: #150329;
-    font-weight: bold;
-    font-size: 15px;
-    border: none;
+@media screen and (min-width: 800px) {
+    .header {
+        background-color: #150329;
+        border: 2px solid #DAF7A6;
+        border-radius: 30px;
+        padding: 10px;
+        transition: 0.5s;
+        display: flex;
+    }
+    
+    .left {
+        margin-right: auto;
+        padding: 15px;
+    }
+    
+    .right {
+        margin-left: auto;
+        padding: 15px;
+    }
+    
+    .leftimage {
+        padding-left: 10px;
+        padding-top: 3px;
+        transition: 0.5s;
+    }
+    
+    .leftimage img {
+        width: 50px;
+        height: 50px;   
+        border: 3px solid #DAF7A6;
+        border-radius: 10px;
+    }
+    
 }
